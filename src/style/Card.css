@@ -39,7 +39,6 @@ p {
   mix-blend-mode: multiply; /*to change the hue of the image based on the container bacground*/
 }
 .infoDiv {
-  float: right;
   width: 50%;
   order: 1;
   padding: 2rem;
@@ -70,4 +69,29 @@ p {
 }
 .Stat h2 {
   color: var(--black);
+}
+
+@media only screen and (max-width: 767px) {
+  .Card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .imageDiv {
+    order: 1;
+    min-width: 100%;
+    overflow: hidden;
+    max-height: 350px;
+  }
+  .imageDiv img {
+    min-width: 100%;
+  }
+  .infoDiv {
+    order: 1;
+    margin: 1rem;
+    align-self: center;
+    min-width: 70vw;
+  }
+  .stats {
+    flex-direction: column;
+  }
 }
